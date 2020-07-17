@@ -23,7 +23,7 @@ class TestMoviewDetails extends Component {
   };
   backToMovieList = () => {
     this.setState({
-      backLink: "/test-movie-list"
+      backLink: "/"
     })
   }
   render() {
