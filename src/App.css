@@ -1,0 +1,191 @@
+.userData {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  border: 1px solid gray;
+  margin: 20px;
+  padding: 15px;
+  border-radius: 6px;
+  box-shadow: 0px 0px 3px 0px grey;
+  text-align: center;
+}
+.loader-img img {
+  height: 50px;
+  display: flex;
+  margin: auto;
+}
+.navbar-nav .active {
+  color: #007bff !important;
+  border-bottom: 3px solid;
+}
+.nav-link {
+  font-size: 17px;
+  color: #fff !important;
+  padding: 15px !important;
+}
+.userData img {
+  display: block;
+  margin: auto;
+  height: 200px;
+  width: 200px;
+}
+.userData p {
+  margin-bottom: 0px;
+}
+.error-msg {
+  color: #e61717;
+  font-weight: bold;
+}
+.activeCase {
+  background: #007bff !important;
+  color: #fff;
+  font-weight: bold;
+}
+.recoveredCase {
+  background: #169416 !important;
+  color: #fff;
+  font-weight: bold;
+}
+
+.deathesCase,
+.delete {
+  background: #e61717 !important;
+  color: #fff;
+  font-weight: bold;
+}
+.footer-copyright {
+  background: #0e0f10 !important;
+  padding: 5px 0;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+}
+.nav-dark {
+  background-color: #0e0f10 !important;
+}
+.footer-copyright p {
+  margin: 10px 0 10px 0 !important;
+}
+.main-div {
+  margin: 25px;
+}
+.table thead th,
+th {
+  background: #007bff;
+  color: #fff;
+}
+.table td,
+.table th {
+  padding: 10px;
+}
+button {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 4px 6px;
+  border-radius: 5px !important;
+  margin-right: 10px !important;
+}
+.form-control {
+  height: 32px !important;
+  padding: 4px 4px !important;
+}
+button[disabled] {
+  cursor: not-allowed;
+  background: #a4a4a4;
+}
+.navbar {
+  padding: 0rem 1rem !important;
+  margin-bottom: 20px;
+}
+.list-group-item {
+  cursor: pointer;
+}
+.card-title {
+  text-transform: capitalize;
+}
+.card {
+  margin-bottom: 20px;
+}
+
+::selection {
+  background-color: #7835e2c7;
+}
+.table td,
+.table th {
+  border: 1px solid #dee2e6 !important;
+}
+.modal-backdrop {
+  background-color: #00000047 !important;
+}
+.fade:not(.show) {
+  opacity: inherit !important;
+}
+.modal-header {
+  background-color: #007bff;
+  padding: 15px 0px 7px 17px !important;
+}
+.modal-footer {
+  padding: 7px !important;
+}
+.react-datepicker-wrapper {
+  width: 100%;
+}
+.card-text-right {
+  float: right;
+}
+.card-price {
+  font-size: 20px;
+  font-weight: 800;
+}
+.card-product {
+  border: 1px solid #cec9c9;
+  padding: 15px;
+  box-shadow: 0px 0px 4px 1px #cec9c9;
+}
+
+.progress-heading {
+  background: #007bff;
+  color: #fff;
+  padding: 5px;
+}
+.progress-div {
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  box-shadow: 0px 1px 4px 0px #007bff;
+}
+.progress-bar {
+  padding: 0 23px 0px 5px;
+}
+.progress-inner {
+  margin: 10px;
+}
+.progress-inner p {
+  margin: 0px;
+}
+/* login Form CSS */
+.login-form {
+  width: 450px;
+  border: 2px solid #007bff;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 4px 1px #007bff;
+  margin: auto;
+}
+
+@media (max-width: 767px) {
+  .login-form {
+    width: 94%;
+  }
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 55% !important;
+    margin: 3.75rem auto !important;
+  }
+  .col-sm-6 {
+    max-width: 47% !important;
+    margin: 15px;
+  }
+}
