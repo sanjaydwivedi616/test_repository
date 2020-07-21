@@ -7,7 +7,8 @@ class TestMoviewList extends Component {
     movieListData: [],
     movieName: "",
     loader: false,
-    TestMoviewDetails: null
+    TestMoviewDetails: null,
+    error: "",
   }
 
   getSearchMovieList = (event) => {
@@ -15,13 +16,19 @@ class TestMoviewList extends Component {
     //Marvel
     if (this.state.movieName !== "") {
       axios.get(`http://www.omdbapi.com/?apikey=b9bd48a6&s=${this.state.movieName}&type=movie`).then(res => {
-        console.log(res.data.Search)
-        this.setState({
-          movieListData: res.data.Search,
-          loader: false,
-          movieName: "",
-          specificMovieData: ""
-        });
+        console.log(res.data.Error);
+        if (res.data.Error == undefined) {
+          this.setState({
+            movieListData: res.data.Search,
+            loader: false,
+            movieName: "",
+            specificMovieData: "",
+          });
+        } else {
+          this.setState({
+            error: res.data.Error
+          })
+        }
       })
     }
   };
@@ -57,14 +64,23 @@ class TestMoviewList extends Component {
             onChange={this.onchangeHandler} style={{ width: "220px", display: 'inline-block' }} placeholder="Type movie name" />
           <button type="submit">Search</button>
         </form>
-        <ul className='list-group'>
-          {movieListData.map(list => {
-            return (
-              <li className="list-group-item" key={list.imdbID}
-                onClick={() => this.selectedList(list.imdbID)}><b>Title : </b>{list.Title}</li>
-            )
-          })}
-        </ul>
+
+        {this.state.error !== "" ?
+          <p>{this.state.error}</p>
+
+          :
+          <ul className='list-group'>
+            {movieListData.map(list => {
+              return (
+                <li className="list-group-item" key={list.imdbID}
+                  onClick={() => this.selectedList(list.imdbID)}><b>Title : </b>{list.Title}</li>
+              )
+            })}
+          </ul>
+        }
+
+
+
       </div>
     );
   }

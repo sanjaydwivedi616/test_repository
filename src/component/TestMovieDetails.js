@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
+import { NavLink } from "react-router-dom";
 
 class TestMoviewDetails extends Component {
   state = {
@@ -27,16 +27,13 @@ class TestMoviewDetails extends Component {
     })
   }
   render() {
-    const { backLink } = this.state;
-    if (backLink) {
-      return <Redirect to={backLink} />
-    }
+
     const { movieDetailsData } = this.state;
     const specificMovieData = this.props.location.state.id;
     return (
       <div className='container-fluid'>
         <h3>Movie Details Page</h3>
-        <button onClick={this.backToMovieList}>Back to list</button>
+        <NavLink to="/">Back to list</NavLink>
         <div className='card'>
           <div className='card-body'>
             <h5 className='card-title'><b>Title :</b> {movieDetailsData.Title}</h5>
